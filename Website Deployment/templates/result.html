@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .image-container {
+            max-width: 400px; /* Adjust based on your preference */
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Prediction Result</h2>
+        <div class="alert alert-info" role="alert">
+            <strong>Result:</strong> {{ result }}
+        </div>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='uploads/' + user_image) }}" alt="Uploaded Image" class="img-thumbnail">
+        </div>
+        <a href="/" class="btn btn-primary mt-3">Try another image</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
